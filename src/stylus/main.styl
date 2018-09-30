@@ -1,0 +1,432 @@
+/** Stylus Styles */
+@import '../../node_modules/vuetify/src/stylus/settings/_colors'
+
+//=========================================== [ Other Global Component Styles ]
+$theme := {
+  primary: $red.darken-2,
+  secondary: $grey.lighten-1,
+  accent: $red.accent-2,
+  error: $red.accent-4,
+  info: $blue.lighten-1,
+  success: $green.leghten-2,
+  warning: $amber.darken-2
+}
+a  {
+  color: #42b983;
+}
+h1, h2, h6 {
+  font-weight: normal;
+}
+h1.msize {
+  font-size: 40px;
+  font-weight: bold !important;
+  font-variant: small-caps !important;
+}
+h5.brush_SMT {
+  line-height: 20.5px;
+  font-family: "Brush Script MT";
+  letter-spacing: 1.5px;
+  font-size: 1.5em;
+}
+h5.bSMT {
+  line-height: 20px;
+  font-family: "Brush Script MT";
+  letter-spacing: 1.5px;
+  font-size: 1.4em;
+}
+h5.xsbrush_SMT {
+  line-height: 28.5px;
+  font-family: "Brush Script MT";
+  font-size: 1.2em;
+}
+div.headline {
+  font-size: 18px !important;
+  font-weight: 500;
+  line-height: 22px !important;
+  font-variant: small-caps !important;
+  letter-spacing: normal !important
+}
+div.bigf_date_location {
+  font-size: 1.25em !important;
+  font-weight: normal !important;
+  font-variant: small-caps !important;
+  color: #7c4dff !important;
+}
+div.bigf_description {
+  font-size: 1.5em;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+div.xsf_date_location {
+  font-size: .9em !important;
+  font-weight: normal !important;
+  font-variant: small-caps !important;
+  color: #7c4dff !important;
+}
+div.xsf_description {
+  font-size: .9em;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+p.pc {
+  line-height: 0.5px !important;
+  font-family: "Brush Script MT";
+  font-size: 3.7em !important;
+  line-height: 50.4px !important;
+  margin-top: 40px !important;
+  color: grey !important;
+}
+p.tablet {
+  line-height: 0.5px !important;
+  font-family: "Brush Script MT";
+  font-size: 2.9em !important;
+  line-height: 50.4px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 20px !important;
+  margin-top: 40px !important;
+  color: grey !important;
+}
+p.phone {
+  line-height: 0.5px !important;
+  font-family: "Brush Script MT";
+  font-size: 1.3em !important;
+  line-height: 15.4px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 20px !important;
+  margin-top: 40px !important;
+  color: grey !important;
+}
+
+//=========================================== [ Layout & Toolbar Styles ]
+.layout.sh {
+  text-align: center;
+}
+.container.mlayout {
+  background-color: rgba(255, 255, 255, 100) !important;
+}
+.container.grid-list-lg .layout .flex {
+    padding: 0px;
+}
+.toolbar {
+  z-index: 2 !important;
+  width: 100% !important;
+  height: 50px !important;
+  position: fixed !important;
+  transition: .2s cubic-bezier(.4, 0, .2, 1) !important;
+}
+.toolbar__content {
+  height: 52px !important;
+}
+.toolbar__title, .list__tile__title {
+  font-weight: 400;
+}
+.toolbar__items > .btn {
+    height: 98%;
+    margin: 0;
+}
+.toolbar__title {
+  color: black !important;
+}
+.toolbar__title:hover {
+  color: #ab47bc !important;
+}
+.card.transp_dialog {
+  background-color: rgba(255, 255, 255, 1) !important;
+  height: auto !important;
+  // width: fit-content;
+  // grey lighten-3
+}
+.card__title.mtitle {
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+.navigation__drawer .toolbar {
+  background-color: grey lighten-2;
+}
+.list__tile__title:hover {
+  font-weight: 800;
+  transition: 0.0s;
+}
+
+//=========================================== [ Custom Loader Styles ]
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
+@-moz-keyframes loader {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+@-webkit-keyframes loader {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+@-o-keyframes loader {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes loader {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+.carousel.xsm {
+  width: 100% !important;
+  height: 340px !important;
+}
+
+
+//=========================================== [ Buttons Styles ]
+.btn.mbtn {
+  width: 130px;
+  height: 30px;
+  color: purple !important;
+  font-size: 8px !important;
+  letter-spacing: 1.5px !important;
+}
+.btn.xsmbtn {
+  width: 130px;
+  height: 30px;
+  color: #fff !important;
+  font-size: 8px !important;
+  background-color: purple !important;
+}
+.btn.mbtn:hover
+.btn.xsmbtn:hover {
+  font-size: 7px !important;
+}
+.btn.phones {
+  width: 135px;
+  height: 35px;
+  color: #fff !important;
+  font-size: 7px !important;
+  margin-right: 2px !important;
+  margin-left:  1px !important;
+  letter-spacing: 1.5px !important;
+  background-color: purple !important;
+}
+.btn.tablets {
+  width: 280px;
+  height: 45px;
+  color: #fff !important
+  font-size: 10px !important;
+  align-items: center !important;
+  background-color: purple !important;
+}
+.btn.pcs {
+  width: 400px;
+  height: 40px;
+  color: purple !important;
+  font-size: 11px !important;
+  margin-left:  20px !important;
+  margin-right: 20px !important;
+  margin-bottom: 20px !important;
+  background-color: white !important;
+}
+.btn.sIn {
+  width: 180px;
+  height: 35px;
+  color: purple !important;
+  font-size: 11px !important;
+  margin-left: -5px !important;
+  background-color: white !important;
+}
+.btn.sUp {
+  width: 180px;
+  height: 35px;
+  color: purple !important;
+  margin-left: -5px !important;
+  font-size: 11px !important;
+  background-color: white !important
+}
+.btn.register {
+  width: 155px;
+  height: 35px;
+  font-size: 9px !important;
+  margin-bottom: 14px !important;
+}
+.btn.create_meetup {
+  width: 240px;
+  height: 40px;
+  font-size: 11px !important;
+  margin-left: -5px !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.btn.upload {
+  width: 200px;
+  height: 30px;
+  color: purple !important;
+  font-size: 10px !important;
+  margin-left: 0px !important;
+  background-color: white !important;
+}
+.btn.upload:hover,
+.btn.create_meetup:hover {
+  color: #fff !important;
+  background-color: #ab47bc !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2) !important;
+}
+.btn.edit_datetime,
+.btn.xsedit_datetime {
+  margin-left: 0px;
+  margin-right: 7px;
+}
+.btn.edit_datetime {
+  width: 100px !important;
+  height: 25px !important;
+  color: purple !important;
+  font-size: 9px !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.btn.xsedit_datetime {
+  width: 56px !important;
+  height: 22px !important;
+  color: purple !important;
+  font-size: 6px !important;
+  letter-spacing: 1.5px;
+}
+.btn.sh {
+  border: 1px solid white;
+  color: purple !important;
+  background-color: #eeeeee !important;
+}
+.btn.sh:hover {
+  color: #eeeeee !important;
+  background-color: purple !important;
+  box-shadow: 0px 15px 20px rgba(203, 42, 208, 0.2) !important;
+}
+.btn.shs {
+  margin-right: 6px !important;
+  margin-left: -5px !important;
+  border: 1px solid white!important;
+}
+.button {
+  border: none;
+  letter-spacing: 2.5px;
+  font-weight: 500 important;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase !important;
+  transition: all 0.1s ease 0s !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.button:hover {
+  color: #fff !important;
+  font-size: 8px !important;
+  background-color: purple !important;
+  box-shadow: 0px 15px 20px rgba(203, 42, 208, 0.3) !important;
+  transform: translateY(-4px) !important;
+}
+.btn.xsclose {
+  font-size: 10px;
+  padding-left: 1.6rem !important;
+  padding-right: 1.6rem !important;
+  margin-right:2px !important;
+}
+.btn.xssave {
+  font-size: 10px;
+  padding-left: 1.8rem !important;
+  padding-right: 1.8rem !important;
+  margin-left: 0ZZpx !important;
+}
+.btn.close {
+  font-size: 11px;
+  padding-left: 1.6rem !important;
+  padding-right: 1.6rem !important;
+  margin-right: 2px !important;
+}
+.btn.save {
+  font-size: 11px;
+  padding-left: 1.8rem !important;
+  padding-right: 1.8rem !important;
+  margin-left: 0ZZpx !important;
+}
+.btn._xsclose {
+  font-size: 10px;
+  padding-left: 1.6rem !important;
+  padding-right: 1.6rem !important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+
+}
+.btn._xssave {
+  font-size: 10px;
+  padding-left: 1.8rem !important;
+  padding-right: 1.8rem !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.btn._close {
+  font-size: 10px;
+  padding-left: 2.2rem !important;
+  padding-right: 2.4rem !important;
+  margin-left: 0px !important;
+  margin-right: 2px !important;
+}
+.btn._save {
+  font-size: 10px;
+  padding-left: 2.4rem !important;
+  padding-right: 2.4rem !important;
+  margin-left: 2px !important;
+  margin-right: 0px !important;
+}
+.btn.cancel {
+  width: 130px !important;
+  height: 45px !important;
+  font-size: 10px !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+  border: 1px solid #fff!important;
+  margin-bottom: 6px !important;
+}
+.btn.confirm {
+  width: 130px !important;
+  height: 45px !important;
+  font-size: 10px !important;
+  padding-left: 2.3rem !important;
+  padding-right: 2.3rem !important;
+  border: 1px solid #fff!important;
+  margin-bottom: 6px !important;
+}
+.buttonv2 {
+  border: none;
+  letter-spacing: 2.5px;
+  color: #fff !important;
+  font-weight: 500 important;
+  font-family: 'Roboto', sans-serif;
+  background-color: purple !important;
+  text-transform: uppercase !important;
+  transition: all 0.1s ease 0s !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.buttonv2:hover {
+  color: #fff !important;
+  font-size: 8px !important;
+  background-color: #ab47bc !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0px 15px 20px rgba(203, 42, 208, 0.3) !important;
+}
+
+//=========================================== [ Title Styles ]
+.titleLg {
+  position: absolute;
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e1bee7;
+  font-size: 17px;
+  padding: 20px;
+  font-family: Papyrus, fantasy;
+}
+.titleSm {
+  position: absolute;
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e1bee7;
+  font-size: 10px;
+  padding: 10px;
+  font-family: Papyrus, fantasy;
+}
+
+@import '../../node_modules/vuetify/src/stylus/main'
